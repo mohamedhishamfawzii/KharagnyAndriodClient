@@ -88,7 +88,7 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
                 android:background="@drawable/rounded"
-                android:onClick="loginFunc"
+                android:onClick="loginFunction"
                 android:text="Login"
                 android:textColor="#b5bcc0" />
 
