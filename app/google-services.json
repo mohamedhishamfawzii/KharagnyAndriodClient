@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "116747714317",
+    "firebase_url": "https://kharagny-e4143.firebaseio.com",
+    "project_id": "kharagny-e4143",
+    "storage_bucket": "kharagny-e4143.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116747714317:android:95a48cbf66b2cd54",
+        "android_client_info": {
+          "package_name": "com.example.android.kharagny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116747714317-19ou1d68pocp68r8o1ciopo0e6tj0p58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNT3QH7nxvWNxJTgKjQ-603nN84YqZ1lM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
