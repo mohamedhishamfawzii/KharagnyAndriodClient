@@ -23,16 +23,25 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Iterator;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
+    Button loginButton;
     EditText username;
     EditText password;
-    public void loginFunc(View view)
+   /* public void loginFunc(View view)
     {
         Log.i("status" , "pressed");
-    }
+    }*/
     Intent intent ;
     View fbButt, gButt;
     CallbackManager fbCallbackManager;
+
+    // function for the login button
+    public void loginFunction(View view)
+    {
+        intent = new Intent(getApplicationContext() , HomeActivity.class);
+        startActivity(intent);
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         fbButt = findViewById(R.id.facebooklogin);
         gButt = findViewById(R.id.googlelogin);
-        button = (Button)findViewById(R.id.button);
+        loginButton = (Button)findViewById(R.id.button);
         username = (EditText)findViewById(R.id.emailText);
         password = (EditText)findViewById(R.id.editText3);
 
