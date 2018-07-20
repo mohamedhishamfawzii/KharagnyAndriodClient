@@ -30,7 +30,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/splash_sign_in_butt"
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
@@ -38,10 +38,11 @@
             android:background="@drawable/rounded2"
             android:onClick="loginFunction"
             android:text="log in "
-            android:textColor="#b5bcc0" />
+            android:textColor="#b5bcc0"
+            android:visibility="gone"/>
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/splash_sign_up_butt"
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
@@ -50,6 +51,7 @@
             android:onClick="signFunction"
             android:text="sign up "
             android:textColor="#b5bcc0"
+            android:visibility="gone"
             />
     </LinearLayout>
 

@@ -9,36 +9,32 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:background="@drawable/login"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:orientation="vertical"
-            android:weightSum="1"
-            android:layout_alignParentBottom="true">
+            android:weightSum="1">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_above="@+id/emailText"
-                android:layout_alignEnd="@+id/button"
+                android:layout_alignEnd="@+id/login_butt"
                 android:layout_alignParentTop="true"
-                android:layout_alignStart="@+id/button"
+                android:layout_alignStart="@+id/login_butt"
                 android:layout_marginBottom="30sp"
                 android:layout_weight="0.12"
                 android:scaleType="fitCenter"
@@ -56,7 +52,6 @@
                 android:backgroundTint="#b5bcc0"
                 android:ems="10"
                 android:hint="Username"
-                android:inputType="textEmailAddress"
                 android:shadowColor="#b5bcc0"
                 android:textColor="@android:color/background_light"
                 android:textColorHighlight="#b5bcc0"
@@ -73,7 +68,7 @@
                 android:backgroundTint="#b5bcc0"
                 android:ems="10"
                 android:hint="Password"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:shadowColor="#b5bcc0"
                 android:textColor="@android:color/background_light"
                 android:textColorHighlight="#b5bcc0"
@@ -91,7 +86,7 @@
                 android:backgroundTint="#b5bcc0"
                 android:ems="10"
                 android:hint="Re-type password"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:shadowColor="#b5bcc0"
                 android:textColor="@android:color/background_light"
                 android:textColorHighlight="#b5bcc0"
@@ -101,22 +96,22 @@
                 android:id="@+id/editText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/button"
+                android:layout_above="@+id/login_butt"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="30dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:backgroundTint="#b5bcc0"
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:drawablePadding="5dp"
                 android:ems="10"
                 android:hint="Email"
-                android:inputType="textPassword"
+                android:inputType="textEmailAddress"
                 android:textColor="@android:color/background_light"
-                android:textColorHint="#b5bcc0"
-                android:drawableLeft="@drawable/ic_email_black_24dp"
-                android:drawablePadding="5dp"/>
+                android:textColorHint="#b5bcc0" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/login_butt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignEnd="@+id/editText3"
@@ -126,9 +121,22 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
                 android:background="@drawable/rounded"
-                android:onClick="loginFunc"
                 android:text="Sign up "
                 android:textColor="#b5bcc0" />
+
+            <ImageView
+                android:id="@+id/sign_up_fb_butt"
+                android:layout_width="50dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center"
+                android:src="@drawable/com_facebook_button_icon" />
+
+            <ImageView
+                android:id="@+id/sign_up_g_butt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/common_google_signin_btn_icon_light" />
 
         </LinearLayout>
 

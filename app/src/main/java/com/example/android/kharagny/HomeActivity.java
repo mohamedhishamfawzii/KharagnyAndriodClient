@@ -4,14 +4,18 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    private boolean loadFragment(android.support.v4.app.Fragment fragment) {
+public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener
+{
+    private boolean loadFragment(android.support.v4.app.Fragment fragment)
+    {
         //switching fragment
-        if (fragment != null) {
+        if (fragment != null)
+        {
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container , fragment)
@@ -24,10 +28,17 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         loadFragment(new HomeFragment());
+
+        String uid = getIntent().getStringExtra("uid");
+        if (!uid.equals(""))
+            popAnAlertDialogUp("[debug] uid", uid);
+        else
+            popAnAlertDialogUp("Error", "no uid received");
 
         BottomNavigationView navigationView = findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
@@ -36,7 +47,8 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
         android.support.v4.app.Fragment fragment = null;
         switch(item.getItemId())
         {
@@ -53,4 +65,17 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         return true;
     }
 
+    //tools
+    void popAnAlertDialogUp(Object title, Object message)
+    {
+        if (title == null)
+            title = "";
+        if (message == null)
+            message = "";
+
+        new AlertDialog.Builder(this)
+                .setTitle(title.toString())
+                .setMessage(message.toString())
+                .show();
+    }
 }
