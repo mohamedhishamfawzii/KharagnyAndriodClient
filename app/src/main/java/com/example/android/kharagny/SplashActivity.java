@@ -40,7 +40,8 @@ public class SplashActivity extends AppCompatActivity {
         Animation animation = new AlphaAnimation(0.00f , 1.00f);
         animation.setDuration(2000);
         imageView.startAnimation(animation);
-        imageView.animate().rotationBy(360).setDuration(2000);
+        imageView.animate().rotationBy(360).setDuration(1000);
+
     }
 
     public void printHashKey() {

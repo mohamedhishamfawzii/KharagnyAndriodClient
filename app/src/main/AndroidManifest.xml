@@ -48,7 +48,9 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home"></activity>
+            android:label="@string/title_activity_home" />
+        <activity android:name=".CategoriesActivity" />
+        <activity android:name=".StoreActivity"></activity>
     </application>
 
 </manifest>
