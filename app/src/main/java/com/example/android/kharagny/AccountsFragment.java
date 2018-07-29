@@ -13,21 +13,28 @@ import java.util.ArrayList;
 
 public class AccountsFragment extends android.support.v4.app.Fragment {
     ListView listView;
-    ArrayList<String> categoriesTxt;
+    ArrayList<String> accountsTxt;
     ArrayAdapter arrayAdapter;
+    ////////////////////////////////////////////////////////////////////////////////////
+   // CustomAdapter customAdapter;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_accounts, null);
-        categoriesTxt = new ArrayList<String>();
-        categoriesTxt.add("account1");
-        categoriesTxt.add("account2");
-        categoriesTxt.add("account3");
-        categoriesTxt.add("account4");
-        categoriesTxt.add("account5");
+        accountsTxt = new ArrayList<String>();
+        accountsTxt.add("account1");
+        accountsTxt.add("account2");
+        accountsTxt.add("account3");
+        accountsTxt.add("account4");
+        accountsTxt.add("account5");
         listView = view.findViewById(R.id.listView);
-        arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1 , categoriesTxt);
+        arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1 , accountsTxt);
         listView.setAdapter(arrayAdapter);
+        /////////////////////////////////////////////////////////////////////////////////
+       // customAdapter = new CustomAdapter(getContext() ,  categoriesTxt);
+      //  listView.setAdapter(customAdapter);
+        ///////////////////////////////////////////////////////////////////////////////
+
         //just change the fragment_dashboard
         //with the fragment you want to inflate
         //like if the class is HomeFragment it should have R.layout.home_fragment
